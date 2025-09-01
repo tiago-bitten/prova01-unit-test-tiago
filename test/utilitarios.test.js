@@ -43,6 +43,10 @@ describe('Testes da classe Utilitarios', () => {
         expect(utilitarios.dividir(4, 2)).toBe(2);
     });
 
+    test('Numero b igual a zero deve lançar exception', () => {
+        expect(utilitarios.dividir(4, 0)).toThrow("Divisão por zero");
+    });
+
     test('Deve validar se número informar é par corretamente', () => {
         expect(utilitarios.ehPar(2)).toBe(true);
     });
@@ -75,6 +79,10 @@ describe('Testes da classe Utilitarios', () => {
         expect(utilitarios.ehNumero('ovo')).toBe(false);
     });
 
+    test('Valor informado é número, deve retornar corretamente', () => {
+        expect(utilitarios.ehNumero(5)).toBe(true);
+    });
+
     test('Deve remover espaços de valor informado corretamente', () => {
         expect(utilitarios.removerEspacos('queijo   ')).toBe('queijo');
     });
@@ -93,6 +101,10 @@ describe('Testes da classe Utilitarios', () => {
 
     test('Deve calcular media da lista corretamente', () => {
         expect(utilitarios.mediaArray([1, 5, 3])).toBe(3);
+    });
+
+    test('Lista sem valores deve retornar zero corretamente', () => {
+        expect(utilitarios.mediaArray([])).toBe(0);
     });
 
     test('Deve remover itens duplicados da lista corretamente', () => {
