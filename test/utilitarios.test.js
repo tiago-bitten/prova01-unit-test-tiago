@@ -96,10 +96,14 @@ describe('Testes da classe Utilitarios', () => {
     });
 
     test('Deve remover itens duplicados da lista corretamente', () => {
-        expect(utilitarios.toStrictEqual([1, 5, 3, 3])).toBe([1, 5, 3]);
+        expect(utilitarios.removerDuplicados([1, 5, 3, 3])).toBe([1, 5, 3]);
     });
 
     // test('Deve verificar se valor é um polindromo corretamente', () => {
     //     expect(utilitarios.ehPalindromo()).toBe();
     // });
+
+    test('Deve mesclar objetos corretamente', () => {
+        expect(utilitarios.mesclarObjetos({ nome: 'Tetes' }, { idade: 25 })).toBe({ nome: 'Tetes', idade: 25 });
+    });
 });
