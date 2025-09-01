@@ -47,8 +47,12 @@ describe('Testes da classe Utilitarios', () => {
         expect(() => utilitarios.dividir(0, 0)).toThrow('Divisão por zero');
     });
 
-    test('Deve validar se número informar é par corretamente', () => {
+    test('Valor informado par, deve retornar true', () => {
         expect(utilitarios.ehPar(2)).toBe(true);
+    });
+
+    test('Valor informando impar, deve retornar false', () => {
+        expect(utilitarios.ehPar(1)).toBe(false);
     });
 
     test('Deve retornar primeiro elemento da lista corretamente', () => {
