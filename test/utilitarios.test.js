@@ -44,7 +44,7 @@ describe('Testes da classe Utilitarios', () => {
     });
 
     test('Numero b igual a zero deve lançar exception', () => {
-        expect(utilitarios.dividir(0, 0)).toThrow("Divisão por zero");
+        expect(utilitarios.dividir(0, 0)).toThrow('Divisão por zero');
     });
 
     test('Deve validar se número informar é par corretamente', () => {
