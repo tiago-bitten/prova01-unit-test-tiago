@@ -63,8 +63,8 @@ describe('Testes da classe Utilitarios', () => {
         expect(utilitarios.ordenarArray([4, 1, 6])).toBe([1, 4, 6]);
     });
 
-    test('Deve ordernar lista de forma decrescente corretamente', () => {
-        expect(utilitarios.inverterArray([4, 1, 6])).toBe([6, 4, 1]);
+    test('Deve inverter lista de forma corretamente', () => {
+        expect(utilitarios.inverterArray([4, 1, 6])).toBe([6, 1, 4]);
     });
 
     // test('Deve gerar numero aleatorio corretamente', () => {
@@ -84,7 +84,7 @@ describe('Testes da classe Utilitarios', () => {
     });
 
     test('Deve juntar lista corretamente', () => {
-        expect(utilitarios.juntarArray(['a', 'b', 'c'])).toBe('a, b, c');
+        expect(utilitarios.juntarArray(['a', 'b', 'c'])).toBe('a,b,c');
     });
 
     test('Deve contar palavras corretamente', () => {
@@ -96,7 +96,7 @@ describe('Testes da classe Utilitarios', () => {
     });
 
     test('Deve remover itens duplicados da lista corretamente', () => {
-        expect(utilitarios.removerDuplicados([1, 5, 3, 3])).toBe([1, 5, 3]);
+        expect(utilitarios.toStrictEqual([1, 5, 3, 3])).toBe([1, 5, 3]);
     });
 
     // test('Deve verificar se valor é um polindromo corretamente', () => {
